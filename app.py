@@ -1,5 +1,5 @@
 from distutils.log import debug
-from flask import Flask ,render_template ,request  ,  redirect, url_for
+from flask import Flask ,render_template ,request , redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ class Todo(db.Model):
     title = db.Column(db.String(100))
     complete = db.Column(db.Boolean)  
 db.create_all()
-
+#changed
 @app.route("/")
 def  index():
     #show all todos
